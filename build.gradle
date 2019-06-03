@@ -5,13 +5,14 @@ buildscript {
     repositories {
         google()
         jcenter()
-        
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.4.0'
+        classpath 'com.android.tools.build:gradle:3.4.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
+
+        // For bintray publishing
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.0'
     }
 }
 
@@ -22,7 +23,7 @@ ext {
 
     libPomUrl = 'https://github.com/doophie/doophrame2'
     libGithubRepo = 'doophie/doophrame2'
-    libModuleName = 'doophrame2'
+    libModuleName = 'doophrame'
     libModuleDesc = 'Android framework'
     libBintrayName = 'doophrame2'
 }
@@ -31,8 +32,11 @@ allprojects {
     repositories {
         google()
         jcenter()
-        
     }
+}
+
+subprojects {
+    tasks.withType(Javadoc).all { enabled = false }
 }
 
 task clean(type: Delete) {
