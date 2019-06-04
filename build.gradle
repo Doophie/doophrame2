@@ -23,7 +23,7 @@ ext {
 
     libPomUrl = 'https://github.com/doophie/doophrame2'
     libGithubRepo = 'doophie/doophrame2'
-    libModuleName = 'doophrame'
+    libModuleName = 'doophrame-2'
     libModuleDesc = 'Android framework'
     libBintrayName = 'doophrame2'
 }

@@ -1,1 +1,1 @@
-include ':doophrame-2'
+include ':doophrame-2', ':doophrametestapp'
