@@ -11,6 +11,7 @@ import kotlinx.android.synthetic.main.list_item_a.*
 import kotlinx.android.synthetic.main.phrame_b.*
 
 class PhrameB(private val phrameObject: PhrameObject) : Doophragment() {
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.phrame_b, container, false)
     }
@@ -21,4 +22,5 @@ class PhrameB(private val phrameObject: PhrameObject) : Doophragment() {
         detailsText.text = "Position ${phrameObject.pos}"
         detailsImage.setColorFilter(phrameObject.color)
     }
+
 }

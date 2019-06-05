@@ -10,6 +10,7 @@ import ca.doophie.doophrame2.transitions.TargetedTransition
 
 
 abstract class Doophragment: Fragment() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
