@@ -58,6 +58,6 @@ The attach call can be made in the following ways:
 
 ```
     viewGroup.attach(SomeDoophragment(), listOf(
-        TargetedTransition(fragmentWeAreComingFrom, objectWeTransitionFrom, idOfObjectWeTransitionToo)
+        TargetedTransition(fragmentWeAreComingFrom, objectWeTransitionFrom, idOfObjectWeTransitionTo)
     ), "SomeState") // the state is optional - only include if you want to add to backstack
 ```
