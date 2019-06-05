@@ -1,7 +1,6 @@
 package ca.doophie.doophrametestapp.models
 
 import android.graphics.Color
-import java.util.*
 import kotlin.random.Random
 
 data class PhrameObject(val pos: Int) {

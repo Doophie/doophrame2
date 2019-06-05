@@ -10,7 +10,11 @@ import ca.doophie.doophrametestapp.R
 import ca.doophie.doophrametestapp.models.PhrameObject
 import kotlinx.android.synthetic.main.list_item_a.view.*
 
-class PhrameAAdapter(val data: List<PhrameObject>, val itemSelected: (TextView, ImageView, PhrameObject)->Unit): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class PhrameAAdapter(
+        val data: List<PhrameObject>,
+        val itemSelected: (TextView, ImageView, PhrameObject)->Unit
+): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         // so that the itemView wont be cut off when transitioning back into focus
         parent.clipChildren = false
@@ -30,7 +34,9 @@ class PhrameAAdapter(val data: List<PhrameObject>, val itemSelected: (TextView, 
     }
 }
 
-class PhrameAView(item: View,  val itemSelected: (TextView, ImageView, PhrameObject)->Unit) : RecyclerView.ViewHolder(item) {
+class PhrameAView(item: View,
+                  val itemSelected: (TextView, ImageView, PhrameObject)->Unit
+) : RecyclerView.ViewHolder(item) {
 
     lateinit var phrameObject: PhrameObject
 
