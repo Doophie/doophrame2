@@ -5,5 +5,6 @@ import ca.doophie.doophrame2.fragmentFramework.Doophragment
 
 data class TargetedTransition (
     val fromFragment: Doophragment,
-    val fromObject: View
+    val fromObject: View,
+    val toObjectId: Int
 )

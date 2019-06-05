@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../doophrame-2/doophrame-2.iml" filepath="$PROJECT_DIR$/../doophrame-2/doophrame-2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../doophrame2.iml" filepath="$PROJECT_DIR$/../doophrame2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/doophrametestapp.iml" filepath="$PROJECT_DIR$/doophrametestapp.iml" />
+    </modules>
+  </component>
+</project>

@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.transition.TransitionInflater
 import android.widget.TextView
 import ca.doophie.doophrame2.R
+import ca.doophie.doophrame2.transitions.TargetedTransition
 
 
 abstract class Doophragment: Fragment() {
@@ -18,25 +19,12 @@ abstract class Doophragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        transitions?.forEach { transition ->
+            view.findViewById<View>(transition.toObjectId).transitionName = transition.fromObject.transitionName
+        }
+
         startPostponedEnterTransition()
     }
 
-    fun transition(toFragment: Fragment, fromObjectId: Int, containerId: Int) {
-        sharedElementReturnTransition = TransitionInflater.from(activity).inflateTransition(R.transition.change_image_transform)
-        exitTransition = TransitionInflater.from(activity).inflateTransition(android.R.transition.explode)
-
-        // Create new fragment to add (Fragment B)
-        toFragment.sharedElementEnterTransition = TransitionInflater.from(activity).inflateTransition(R.transition.change_image_transform)
-        toFragment.enterTransition = TransitionInflater.from(activity).inflateTransition(android.R.transition.explode)
-
-        // Our shared element (in Fragment A)
-        val mText = activity?.findViewById(fromObjectId) as TextView
-
-        // Add Fragment B
-        val ft = fragmentManager!!.beginTransaction()
-            .replace(containerId, toFragment)
-            .addSharedElement(mText, mText.transitionName)
-        ft.commit()
-    }
-
+    internal var transitions: List<TargetedTransition>? = null
 }

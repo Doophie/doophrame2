@@ -62,7 +62,7 @@ abstract class DoophieActivity : AppCompatActivity() {
 
     protected fun <T: Serializable>getPref(key: String, private: Boolean = true): T? {
         val prefs = if (private) activityPrefs else appPrefs
-        val obj = DoophieObjectSerializer.deserialize<T>(prefs.getString(key, ""))
+        val obj = DoophieObjectSerializer.deserialize<T>(prefs.getString(key, "")!!)
         return obj
     }
 

@@ -10,7 +10,7 @@ import ca.doophie.doophrametestapp.models.PhrameObject
 import kotlinx.android.synthetic.main.list_item_a.*
 import kotlinx.android.synthetic.main.phrame_b.*
 
-class PhrameB(val phrameObject: PhrameObject) : Doophragment() {
+class PhrameB(private val phrameObject: PhrameObject) : Doophragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.phrame_b, container, false)
     }

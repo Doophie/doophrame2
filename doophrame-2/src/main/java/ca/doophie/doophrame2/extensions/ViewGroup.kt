@@ -21,9 +21,6 @@ fun ViewGroup.attach(fragment: Doophragment, transitions: List<TargetedTransitio
     val slide = TransitionInflater.from(context).inflateTransition(R.transition.change_image_transform)
     val explode  = TransitionInflater.from(context).inflateTransition(R.transition.explode)
 
-
-    // transitions.first().fromFragment.transition(fragment, transitions.first().fromObject.id, this.id)
-
     for (transition in transitions) {
         transition.fromFragment.exitTransition = explode
         transition.fromFragment.sharedElementReturnTransition = slide
@@ -36,6 +33,8 @@ fun ViewGroup.attach(fragment: Doophragment, transitions: List<TargetedTransitio
 
     (this.context as? AppCompatActivity?)?.supportFragmentManager?.commit {
         if (withBackState != null) addToBackStack(withBackState)
+
+        fragment.transitions = transitions
 
         for (transition in transitions) {
             addSharedElement(transition.fromObject, transition.fromObject.transitionName)
