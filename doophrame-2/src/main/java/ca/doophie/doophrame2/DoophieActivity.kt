@@ -1,27 +1,42 @@
 package ca.doophie.doophrame2
 
+import android.content.Context.MODE_PRIVATE
+import android.content.Intent
 import android.content.SharedPreferences
 import android.graphics.Point
 import android.os.Bundle
 import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.work.impl.model.Dependency
 import ca.doophie.doophrame2.utils.DoophieObjectSerializer
 import java.io.Serializable
 
-abstract class DoophieActivity : AppCompatActivity() {
+abstract class DoophieActivity(private val layoutName: String) : AppCompatActivity() {
 
-    abstract val TAG: String
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
 
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
-
+        setContentView(layoutId)
     }
 
+    private val layoutId: Int
+        get() = resources.getIdentifier(layoutName, "layout", packageName)
+
     private val activityPrefs: SharedPreferences
-        get() { return applicationContext.getSharedPreferences(TAG, MODE_PRIVATE) }
+        get() { return applicationContext.getSharedPreferences(layoutName, MODE_PRIVATE) }
 
     private val appPrefs: SharedPreferences
         get() { return applicationContext.getSharedPreferences("AppPrefs", MODE_PRIVATE) }
+
+    fun switchTo(activity: DoophieActivity, dependencies: HashMap<String, Serializable>?) {
+        val intent = Intent(this, activity::class.java)
+
+        for (dep in dependencies ?: HashMap()) {
+            intent.putExtra(dep.key, dep.value)
+        }
+
+        startActivity(intent)
+    }
 
     /***
      * Saves obj with the given key, applies the changes in background
