@@ -29,40 +29,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe51135d-8153-4517-bcc7-c13c03b6ff7a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../doophrame-2/src/main/java/ca/doophie/doophrame2/objectManagment/DoophieDataStore.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/activities/LoginActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/models/User.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/layout/activity_login.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/values/dimens.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../doophrame-2/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../doophrame-2/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../doophrame-2/doophrame-2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../doophrame-2/doophrame-2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../doophrame-2/src/main/java/ca/doophie/doophrame2/DoophieActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../doophrame-2/src/main/java/ca/doophie/doophrame2/DoophieActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../doophrame2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../doophrame2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/quinnfagan.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/quinnfagan.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_activity_activity_1_0_0_alpha08_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_activity_activity_ktx_1_0_0_alpha08_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_concurrent_concurrent_futures_1_0_0_beta01_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_core_core_1_1_0_beta01_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_fragment_fragment_1_1_0_alpha09_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_fragment_fragment_ktx_1_1_0_alpha09_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_common_2_2_0_alpha01_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_2_0_alpha01_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_2_0_alpha01_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_ktx_2_2_0_alpha01_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_versionedparcelable_versionedparcelable_1_1_0_beta01_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/activities/login/LoginHelper.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gradle/5.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/5.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gradle/5.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/5.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gradle/5.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/5.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gradle/5.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/5.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gradle/5.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/5.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gradle/5.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/5.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gradle/5.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/5.1.1/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gradle/5.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/5.1.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doophrametestapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/doophrametestapp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/Phrames/PhrameB.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/fragments/PhrameB.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/Phrames/phrameA/PhrameA.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/fragments/phrameA/PhrameA.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/Phrames/phrameA/PhrameAAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/fragments/phrameA/PhrameAAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/RootActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/activities/RootActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/activities/LoginActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/activities/login/LoginActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/activities/RootActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/activities/RootActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_login.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../local.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,17 +69,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/activities/RootActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="255">
+              <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/models/PhrameObject.kt">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/fragments/phrameA/PhrameA.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+            <state relative-caret-position="60">
+              <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -112,35 +94,50 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/fragments/PhrameB.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_login.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="33" selection-start-column="33" selection-end-column="33" />
+            <state relative-caret-position="140">
+              <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
             </state>
           </provider>
           <provider editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/activities/LoginActivity.kt">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/activities/login/LoginActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
+            <state relative-caret-position="375">
+              <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/activities/login/LoginHelper.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
               <folding>
-                <element signature="e#48#301#0" expanded="true" />
+                <element signature="e#54#165#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../doophrame-2/src/main/java/ca/doophie/doophrame2/objectManagment/DoophieDataStore.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="141" column="12" selection-start-line="141" selection-start-column="12" selection-end-line="141" selection-end-column="111" />
-              <folding>
-                <element signature="e#47#299#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="120">
+              <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -158,17 +155,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.31/d16c788b755be19bf8a7eace113755519a1d7182/kotlin-stdlib-1.3.31-sources.jar!/kotlin/io/FileReadWrite.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
+            <state relative-caret-position="1155">
               <caret line="83" column="16" selection-start-line="83" selection-start-column="16" selection-end-line="83" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../doophrame-2/src/main/java/ca/doophie/doophrame2/DoophieActivity.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -211,18 +199,20 @@
         <option value="$PROJECT_DIR$/../doophrame-2/src/main/java/ca/doophie/doophrame2/fragmentFramework/Doophragment.kt" />
         <option value="$PROJECT_DIR$/../doophrame-2/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/activity_login.xml" />
         <option value="$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/models/User.kt" />
         <option value="$PROJECT_DIR$/../doophrame-2/src/main/java/ca/doophie/doophrame2/DoophieActivity.kt" />
         <option value="$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/activities/RootActivity.kt" />
-        <option value="$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/activities/LoginActivity.kt" />
         <option value="$PROJECT_DIR$/../doophrame-2/src/main/java/ca/doophie/doophrame2/objectManagment/DoophieDataStore.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/activities/LoginActivity.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/activities/login/LoginActivity.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/activities/login/LoginHelper.kt" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/activity_login.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="323" />
-    <option name="y" value="225" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="28" />
+    <option name="y" value="23" />
     <option name="width" value="1412" />
     <option name="height" value="877" />
   </component>
@@ -243,31 +233,11 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
-            <path>
-              <item name="doophrametestapp" type="1abcf292:AndroidViewProjectNode" />
-              <item name="doophrametestapp" type="feadf853:AndroidModuleNode" />
-            </path>
-            <path>
-              <item name="doophrametestapp" type="1abcf292:AndroidViewProjectNode" />
-              <item name="doophrametestapp" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="doophrametestapp" type="1abcf292:AndroidViewProjectNode" />
-              <item name="doophrametestapp" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="doophrametestapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="doophrametestapp" type="1abcf292:AndroidViewProjectNode" />
-              <item name="doophrametestapp" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="doophrametestapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="activities" type="462c0819:PsiDirectoryNode" />
-            </path>
             <path>
               <item name="doophrametestapp" type="1abcf292:AndroidViewProjectNode" />
               <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
@@ -276,8 +246,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -299,6 +267,7 @@
       <recent name="" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="ca.doophie.doophrametestapp.activities.login" />
       <recent name="ca.doophie.doophrametestapp.fragments.activities" />
       <recent name="ca.doophie.doophrametestapp.Phrames.phrameA" />
     </key>
@@ -421,15 +390,15 @@
       <window_info id="Resources Explorer" order="7" />
       <window_info id="Capture Tool" order="8" />
       <window_info anchor="bottom" id="Run" order="0" sideWeight="0.49969825" weight="0.32947975" />
-      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.7474452" visible="true" weight="0.32866243" />
+      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.7474452" weight="0.32866243" />
       <window_info anchor="bottom" id="TODO" order="2" sideWeight="0.49969825" weight="0.32947975" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.69270074" weight="0.32866243" />
-      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.49849126" weight="0.32866243" />
-      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.25255474" side_tool="true" visible="true" weight="0.32866243" />
+      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.4970803" weight="0.32866243" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.22116788" side_tool="true" visible="true" weight="0.32611465" />
       <window_info anchor="bottom" id="Version Control" order="6" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.77956206" weight="0.32611465" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.77883214" visible="true" weight="0.32611465" />
       <window_info anchor="bottom" id="Find" order="8" sideWeight="0.49969825" weight="0.32947975" />
-      <window_info anchor="bottom" id="Android Profiler" order="9" sideWeight="0.49909475" weight="0.32947975" />
+      <window_info anchor="bottom" id="Android Profiler" order="9" show_stripe_button="false" sideWeight="0.49909475" weight="0.32947975" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" />
@@ -491,12 +460,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_root.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/fragments/phrameA/PhrameAAdapter.kt">
       <provider selected="true" editor-type-id="text-editor">
@@ -509,17 +478,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/phrame_b.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/fragments/phrameA/PhrameA.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="66" column="2" selection-start-line="66" selection-start-column="2" selection-end-line="66" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -527,13 +489,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="28" column="42" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/fragments/PhrameB.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="22" column="51" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
         </state>
       </provider>
     </entry>
@@ -565,23 +520,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/activities/ui/login/LoggedInUserView.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/activities/ui/login/LoginViewModel.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding>
-            <element signature="e#57#384#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/activities/ui/login/LoggedInUserView.kt" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/activities/ui/login/LoginViewModel.kt" />
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.31/958c401b129f64de74af4b11a0894693edfa168d/kotlin-stdlib-common-1.3.31-sources.jar!/kotlin/util/Standard.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
@@ -597,12 +537,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/phrame_a.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/../doophrame-2/src/main/AndroidManifest.xml">
       <provider editor-type-id="android-manifest" />
@@ -651,20 +591,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.31/d16c788b755be19bf8a7eace113755519a1d7182/kotlin-stdlib-1.3.31-sources.jar!/kotlin/io/FileReadWrite.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/activities/login.kt" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/activities/RootActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="83" column="16" selection-start-line="83" selection-start-column="16" selection-end-line="83" selection-end-column="16" />
+        <state relative-caret-position="255">
+          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_login.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/fragments/phrameA/PhrameA.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="33" selection-start-column="33" selection-end-column="33" />
+        <state relative-caret-position="60">
+          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/models/User.kt">
       <provider selected="true" editor-type-id="text-editor">
@@ -673,38 +613,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/activities/LoginActivity.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/fragments/PhrameB.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="e#48#301#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="180">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/list_item_a.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/activities/login/LoginActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/activities/login/LoginHelper.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ca/doophie/doophrametestapp/activities/RootActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <folding>
+            <element signature="e#54#165#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../doophrame-2/src/main/java/ca/doophie/doophrame2/objectManagment/DoophieDataStore.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="141" column="12" selection-start-line="141" selection-start-column="12" selection-end-line="141" selection-end-column="111" />
-          <folding>
-            <element signature="e#47#299#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="120">
+          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/list_item_a.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.31/d16c788b755be19bf8a7eace113755519a1d7182/kotlin-stdlib-1.3.31-sources.jar!/kotlin/io/FileReadWrite.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1155">
+          <caret line="83" column="16" selection-start-line="83" selection-start-column="16" selection-end-line="83" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_login.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
         </state>
       </provider>
     </entry>
