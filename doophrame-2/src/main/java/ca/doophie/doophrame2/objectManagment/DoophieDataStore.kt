@@ -1,5 +1,6 @@
 package ca.doophie.doophrame2.objectManagment
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.util.Log
 import org.json.JSONObject
@@ -16,6 +17,7 @@ interface DataStore {
     fun contains(key: String): Boolean
     fun <ObjectType: Any>retrieveObject(key: String) : ObjectType?
     fun <ObjectType: Any>storeObject(key: String, `object`: ObjectType)
+    fun <ObjectType: Any>watch(key: String, watcher: (ObjectType?)->Unit)
 }
 
 class DoophieDataStore(context: Context, name: String) : DataStore {
@@ -24,10 +26,6 @@ class DoophieDataStore(context: Context, name: String) : DataStore {
         private const val TAG = "DoophieDataStore"
 
         private val cachedObjects: HashMap<String, Any> = HashMap()
-    }
-
-    override fun child(name: String): DataStore {
-        return DoophieDataStoreChild(this, name)
     }
 
     private var storedJSON: JSONObject
@@ -51,6 +49,29 @@ class DoophieDataStore(context: Context, name: String) : DataStore {
             return field
         }
 
+    // value is always a (Object)->Unit where object is the type of the key's object
+    private var watchers: HashMap<String, Any> = HashMap()
+
+    override fun child(name: String): DataStore {
+        return DoophieDataStoreChild(this, name)
+    }
+
+    @Suppress("UNCHECKED_CAST")
+    override fun <ObjectType : Any> watch(key: String, watcher: (ObjectType?) -> Unit) {
+        if (watchers.containsKey(key)) {
+            (watchers[key] as?  ArrayList<(ObjectType?)->Unit>)?.add(watcher)
+        } else {
+            val list = ArrayList<(ObjectType?)->Unit>()
+
+            list.add(watcher)
+
+            watchers[key] = list
+        }
+
+        watcher.invoke(retrieveObject(key))
+    }
+
+
     override fun contains(key: String): Boolean {
         return storedJSON.opt(key) != null
     }
@@ -59,7 +80,7 @@ class DoophieDataStore(context: Context, name: String) : DataStore {
         val allProperties = `object`::class.members.filter { !it.toString()
                 .contains("(") }.map { it.name }
 
-        var outMap = HashMap<String, Any>()
+        val outMap = HashMap<String, Any>()
         for (name in allProperties) {
              outMap[name] = readInstanceProperty(`object`, name)
         }
@@ -75,6 +96,7 @@ class DoophieDataStore(context: Context, name: String) : DataStore {
         return property.get(instance) as R
     }
 
+    @Suppress("UNCHECKED_CAST")
     override fun <ObjectType: Any>storeObject(key: String, `object`: ObjectType) {
 
         cachedObjects[key] = `object`
@@ -90,6 +112,10 @@ class DoophieDataStore(context: Context, name: String) : DataStore {
         updatedJSON.put(key, objJSON)
 
         storedJSON = updatedJSON
+
+        if (watchers.containsKey(key)) {
+            (watchers[key] as ArrayList<(ObjectType?)->Unit>).forEach { it(`object`) }
+        }
     }
 
     @Throws
@@ -139,6 +165,10 @@ class DoophieDataStore(context: Context, name: String) : DataStore {
 
     private class DoophieDataStoreChild(private val parentDataStore: DataStore,
                                         private val name: String) : DataStore {
+
+        override fun <ObjectType : Any> watch(key: String, watcher: (ObjectType?) -> Unit) {
+            parentDataStore.watch(key, watcher)
+        }
 
         override fun child(name: String): DataStore {
             return DoophieDataStoreChild(parentDataStore, "${this.name}/$name")

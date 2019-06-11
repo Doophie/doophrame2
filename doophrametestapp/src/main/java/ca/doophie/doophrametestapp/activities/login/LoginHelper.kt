@@ -16,9 +16,7 @@ class LoginHelper {
     }
 
     private fun isAlphanumeric(text: String): Boolean {
-        return (text.matches(Regex(".*[A-Za-z].*")) &&
-            text.matches(Regex(".*[0-9].*")) &&
-            text.matches(Regex("[A-Za-z0-9]*")))
+        return text.matches(Regex("[A-Za-z0-9]*"))
     }
 
     fun getPasswordHash(password: String?): String? {
