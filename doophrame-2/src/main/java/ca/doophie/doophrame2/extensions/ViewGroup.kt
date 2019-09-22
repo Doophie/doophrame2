@@ -31,9 +31,7 @@ fun ViewGroup.attach(fragment: Doophragment, transitions: List<TargetedTransitio
 
     fragment.postponeEnterTransition()
 
-    (this.context as? AppCompatActivity?)?.supportFragmentManager?.commit {
-        this.commitAllowingStateLoss()
-
+    (this.context as? AppCompatActivity?)?.supportFragmentManager?.commit(true) {
         if (withBackState != null) addToBackStack(withBackState)
 
         fragment.transitions = transitions
