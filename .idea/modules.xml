@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/doophrame-2/doophrame-2.iml" filepath="$PROJECT_DIR$/doophrame-2/doophrame-2.iml" />
       <module fileurl="file://$PROJECT_DIR$/doophrame2.iml" filepath="$PROJECT_DIR$/doophrame2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/doophrametestapp/doophrametestapp.iml" filepath="$PROJECT_DIR$/doophrametestapp/doophrametestapp.iml" />
     </modules>
   </component>
 </project>

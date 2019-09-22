@@ -18,8 +18,8 @@ buildscript {
 
 ext {
     // ValidateTor Library Info
-    libVersionCode = 1
-    libVersionName = '0.0.1'
+    libVersionCode = 2
+    libVersionName = '0.0.2'
 
     libPomUrl = 'https://github.com/doophie/doophrame2'
     libGithubRepo = 'doophie/doophrame2'
