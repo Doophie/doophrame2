@@ -89,6 +89,10 @@ class DoophieDataStore(context: Context, name: String) : DataStore {
             }
         }
 
+        if (`object`.javaClass.isEnum) {
+            outMap["enumValue"] = (`object` as Enum<*>).name
+        }
+
         return outMap
     }
 
@@ -156,7 +160,10 @@ class DoophieDataStore(context: Context, name: String) : DataStore {
                 Double::class.javaPrimitiveType,
                 Double::class.javaObjectType -> objProperties[p.name] as? Double?
                 String::class.java -> objProperties[p.name] as? String?
-                else -> objProperties[p.name]
+                else -> if (p.returnType.javaClass.isEnum)
+                    objProperties["enumValue"]
+                else
+                    objProperties[p.name]
             } } catch (e: Exception) { null }
             if (data != null)
                 p.setter.call(returnObject, data)

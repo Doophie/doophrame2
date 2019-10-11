@@ -7,7 +7,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.4.1'
+        classpath 'com.android.tools.build:gradle:3.5.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
         // For bintray publishing
@@ -18,7 +18,7 @@ buildscript {
 
 ext {
     // ValidateTor Library Info
-    libVersionCode = 5
+    libVersionCode = 6
     libVersionName = '0.0.6'
 
     libPomUrl = 'https://github.com/doophie/doophrame2'
