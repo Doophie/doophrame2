@@ -150,14 +150,14 @@ class DoophieDataStore(context: Context, name: String) : DataStore {
 
         val properties = returnObject.javaClass.kotlin.memberProperties
         for (p in properties.filterIsInstance<KMutableProperty<*>>()) {
-            val data = when (p.returnType.javaType) {
+            val data = try { when (p.returnType.javaType) {
                 Int::class.javaPrimitiveType,
                 Int::class.javaObjectType -> objProperties[p.name] as? Int?
                 Double::class.javaPrimitiveType,
                 Double::class.javaObjectType -> objProperties[p.name] as? Double?
                 String::class.java -> objProperties[p.name] as? String?
                 else -> objProperties[p.name]
-            }
+            } } catch (e: Exception) { null }
             if (data != null)
                 p.setter.call(returnObject, data)
         }
