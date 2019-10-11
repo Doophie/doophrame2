@@ -82,7 +82,11 @@ class DoophieDataStore(context: Context, name: String) : DataStore {
 
         val outMap = HashMap<String, Any>()
         for (name in allProperties) {
-             outMap[name] = readInstanceProperty(`object`, name)
+            try {
+                outMap[name] = readInstanceProperty(`object`, name)
+            } catch (e: Exception) {
+                continue
+            }
         }
 
         return outMap
