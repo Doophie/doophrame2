@@ -18,6 +18,7 @@ import android.R
 
 
 interface DataStore {
+    fun delete(key: String? = null)
     fun child(name: String) : DataStore
     fun contains(key: String): Boolean
     fun <ObjectType: Any>retrieveObject(key: String) : ObjectType?
@@ -25,7 +26,7 @@ interface DataStore {
     fun <ObjectType: Any>watch(key: String, watcher: (ObjectType?)->Unit)
 }
 
-class DoophieDataStore(context: Context, name: String) : DataStore {
+class DoophieDataStore(context: Context, private val name: String) : DataStore {
 
     companion object {
         private const val TAG = "DoophieDataStore"
@@ -56,6 +57,34 @@ class DoophieDataStore(context: Context, name: String) : DataStore {
 
     // value is always a (Object)->Unit where object is the type of the key's object
     private var watchers: HashMap<String, Any> = HashMap()
+
+    override fun delete(key: String?) {
+        if (key == null) {
+            storedJSON = JSONObject()
+            cachedObjects.keys.filter { it.startsWith("$name/") }.forEach {
+                cachedObjects.remove(it)
+            }
+        } else {
+            if (!contains(key)) return
+
+            val updatedJSON = storedJSON
+
+            var removeKey: (String)->Unit = { key ->
+                updatedJSON.remove(key)
+
+                if (cachedObjects.containsKey("$name/$key"))
+                    cachedObjects.remove("$name/$key")
+            }
+
+            if (key.endsWith("/*"))
+                updatedJSON.keys().forEach {
+                    if (it.startsWith("${key.dropLast(1)}")) removeKey(it)
+                }
+            else removeKey(key)
+
+            storedJSON = updatedJSON
+        }
+    }
 
     override fun child(name: String): DataStore {
         return DoophieDataStoreChild(this, name)
@@ -112,8 +141,7 @@ class DoophieDataStore(context: Context, name: String) : DataStore {
 
     @Suppress("UNCHECKED_CAST")
     override fun <ObjectType: Any>storeObject(key: String, `object`: ObjectType) {
-
-        cachedObjects[key] = `object`
+        cachedObjects["$name/$key"] = `object`
 
         val propertiesJson = JSONObject(getObjectProperties(`object`))
 
@@ -141,7 +169,7 @@ class DoophieDataStore(context: Context, name: String) : DataStore {
 
         val ofType = storedObjJSON.keys().next()
 
-        if (cachedObjects.containsKey(key)) {
+        if (cachedObjects.containsKey("$name/$key")) {
             Log.d(TAG, "Retrieving cached $key object")
 
             return(cachedObjects[key] as ObjectType)
@@ -186,6 +214,12 @@ class DoophieDataStore(context: Context, name: String) : DataStore {
 
     private class DoophieDataStoreChild(private val parentDataStore: DataStore,
                                         private val name: String) : DataStore {
+        override fun delete(key: String?) {
+            if (key == null)
+                parentDataStore.delete("$name/$key")
+            else
+                parentDataStore.delete("$name/*")
+        }
 
         override fun <ObjectType : Any> watch(key: String, watcher: (ObjectType?) -> Unit) {
             parentDataStore.watch(key, watcher)
