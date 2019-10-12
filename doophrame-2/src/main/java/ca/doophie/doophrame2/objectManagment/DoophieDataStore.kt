@@ -9,8 +9,13 @@ import java.lang.Exception
 import kotlin.collections.HashMap
 import kotlin.reflect.KMutableProperty
 import kotlin.reflect.KProperty1
+import kotlin.reflect.full.isSubtypeOf
 import kotlin.reflect.full.memberProperties
+import kotlin.reflect.jvm.javaGetter
 import kotlin.reflect.jvm.javaType
+import android.R
+
+
 
 interface DataStore {
     fun child(name: String) : DataStore
@@ -77,21 +82,22 @@ class DoophieDataStore(context: Context, name: String) : DataStore {
     }
 
     private fun <ObjectType: Any>getObjectProperties(`object`: ObjectType): HashMap<String, Any> {
-        val allProperties = `object`::class.members.filter { !it.toString()
-                .contains("(") }.map { it.name }
+        val allObjectMembers = `object`::class.memberProperties
 
         val outMap = HashMap<String, Any>()
-        for (name in allProperties) {
+        for (property in allObjectMembers) {
             try {
-                outMap[name] = readInstanceProperty(`object`, name)
+                outMap[property.name] = readInstanceProperty(`object`, property.name)
+
+                if (outMap[property.name]?.javaClass?.isEnum == true) {
+                    outMap[property.name] = (outMap[property.name] as? Enum<*>?)?.name ?: ""
+                }
             } catch (e: Exception) {
                 continue
             }
         }
 
-        if (`object`.javaClass.isEnum) {
-            outMap["enumValue"] = (`object` as Enum<*>).name
-        }
+        Log.d(TAG, "getObjProperties outMap = $outMap")
 
         return outMap
     }
@@ -131,6 +137,8 @@ class DoophieDataStore(context: Context, name: String) : DataStore {
     override fun <ObjectType: Any>retrieveObject(key: String) : ObjectType? {
         val storedObjJSON = storedJSON[key] as? JSONObject? ?: return null
 
+        if (!contains(key)) return null
+
         val ofType = storedObjJSON.keys().next()
 
         if (cachedObjects.containsKey(key)) {
@@ -160,11 +168,13 @@ class DoophieDataStore(context: Context, name: String) : DataStore {
                 Double::class.javaPrimitiveType,
                 Double::class.javaObjectType -> objProperties[p.name] as? Double?
                 String::class.java -> objProperties[p.name] as? String?
-                else -> if (p.returnType.javaClass.isEnum)
-                    objProperties["enumValue"]
-                else
+                else -> if (readInstanceProperty<Any?>(returnObject, p.name)?.javaClass?.isEnum == true) {
+                    val valueOf = p.javaClass.getMethod("valueOf", String::class.java)
+                    valueOf.invoke(null, objProperties[p.name])
+                } else
                     objProperties[p.name]
             } } catch (e: Exception) { null }
+
             if (data != null)
                 p.setter.call(returnObject, data)
         }
