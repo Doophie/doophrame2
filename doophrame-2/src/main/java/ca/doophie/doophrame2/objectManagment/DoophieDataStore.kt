@@ -172,7 +172,7 @@ class DoophieDataStore(context: Context, private val name: String) : DataStore {
         if (cachedObjects.containsKey("$name/$key")) {
             Log.d(TAG, "Retrieving cached $key object")
 
-            return(cachedObjects[key] as ObjectType)
+            return(cachedObjects["$name/$key"] as? ObjectType?)
         }
 
         Log.d(TAG, "Retrieving $key object from file")
