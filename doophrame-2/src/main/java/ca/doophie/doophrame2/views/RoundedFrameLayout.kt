@@ -7,12 +7,19 @@ import android.graphics.RectF
 import android.util.AttributeSet
 import android.widget.RelativeLayout
 import androidx.constraintlayout.widget.ConstraintLayout
+import ca.doophie.doophrame2.R
 
 class RoundedFrameLayout(context: Context, attrs: AttributeSet) : ConstraintLayout(context, attrs) {
 
     private lateinit var rectF: RectF
     private val path = Path()
     private var cornerRadius = 15f
+
+    init {
+        val ta = getContext().obtainStyledAttributes(attrs, R.styleable.RoundedFrameLayout)
+        cornerRadius = ta.getFloat(R.styleable.RoundedFrameLayout_cornerRadius, 15f)
+        ta.recycle()
+    }
 
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
         super.onSizeChanged(w, h, oldw, oldh)
