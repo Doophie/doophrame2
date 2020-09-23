@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <attr name="cornerRadius" format="float"/>
+    <attr name="layoutCornerRadius" format="float"/>
 
-    <declare-styleable name="RoundedFrameLayout">
-        <attr name="cornerRadius"/>
+    <declare-styleable name="RoundedFrameLayout" parent="RoundedView">
+        <attr name="layoutCornerRadius"/>
     </declare-styleable>
 
-    <declare-styleable name="RoundedConstraintLayout">
-        <attr name="cornerRadius"/>
+    <declare-styleable name="RoundedConstraintLayout" parent="RoundedView">
+        <attr name="layoutCornerRadius"/>
     </declare-styleable>
 
-    <declare-styleable name="RoundedLinearLayout">
-        <attr name="cornerRadius"/>
+    <declare-styleable name="RoundedLinearLayout" parent="RoundedView">
+        <attr name="layoutCornerRadius"/>
     </declare-styleable>
 
-    <declare-styleable name="RoundedRelativeLayout">
-        <attr name="cornerRadius"/>
+    <declare-styleable name="RoundedRelativeLayout" parent="RoundedView">
+        <attr name="layoutCornerRadius"/>
     </declare-styleable>
 </resources>

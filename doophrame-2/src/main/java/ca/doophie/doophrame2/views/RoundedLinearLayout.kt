@@ -18,7 +18,7 @@ class RoundedLinearLayout(context: Context, attrs: AttributeSet) : LinearLayout(
 
     init {
         val ta = getContext().obtainStyledAttributes(attrs, R.styleable.RoundedLinearLayout)
-        cornerRadius = ta.getFloat(R.styleable.RoundedLinearLayout_cornerRadius, 15f)
+        cornerRadius = ta.getFloat(R.styleable.RoundedLinearLayout_layoutCornerRadius, 15f)
         ta.recycle()
     }
 

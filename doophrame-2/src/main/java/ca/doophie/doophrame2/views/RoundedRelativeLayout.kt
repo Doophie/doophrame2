@@ -16,7 +16,7 @@ class RoundedRelativeLayout(context: Context, attrs: AttributeSet) : RelativeLay
 
     init {
         val ta = getContext().obtainStyledAttributes(attrs, R.styleable.RoundedRelativeLayout)
-        cornerRadius = ta.getFloat(R.styleable.RoundedRelativeLayout_cornerRadius, 15f)
+        cornerRadius = ta.getFloat(R.styleable.RoundedRelativeLayout_layoutCornerRadius, 15f)
         ta.recycle()
     }
 

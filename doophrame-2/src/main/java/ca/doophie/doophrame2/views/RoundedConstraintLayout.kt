@@ -17,7 +17,7 @@ class RoundedConstraintLayout(context: Context, attrs: AttributeSet) : Constrain
 
     init {
         val ta = getContext().obtainStyledAttributes(attrs, R.styleable.RoundedConstraintLayout)
-        cornerRadius = ta.getFloat(R.styleable.RoundedConstraintLayout_cornerRadius, 15f)
+        cornerRadius = ta.getFloat(R.styleable.RoundedConstraintLayout_layoutCornerRadius, 15f)
         ta.recycle()
     }
 
